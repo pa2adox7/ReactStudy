@@ -5,9 +5,9 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "msedge",
+            "type": "chrome",
             "request": "launch",
-            "name": "针对 localhost 启动 Edge",
+            "name": "针对 localhost 启动 Chrome",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceFolder}"
         }
