@@ -89,10 +89,24 @@ export default function LoginPage() {
                     </div>
                 )} */}
 
-                {error && (<ErrorMessage
-                    message={error}
-                    color="text-red-500"
-                />)
+                {error && (
+                    <div className="flex flex-col gap-1">
+                        <ErrorMessage
+                            message={error}
+                            color="text-red-500"
+                        />
+
+                        {failCount >= FAIL_THRESHOLD && (
+                            <button
+                                type="button"
+                                onClick={() => router.push("/reset-password")}
+                                className="text-blue-600 hover:underline text-sm"
+                            >
+                                找回密码
+                            </button>
+                        )}
+                    </div>
+                )
                 }
 
                 <button
@@ -121,7 +135,7 @@ export default function LoginPage() {
                     className="rounded-lg bg-blue-600 py-2 text-sm text-white hover:bg-blue-700 disabled:opacity-50">
                     用户列表
                 </button>
-            </form>
-        </div>
+            </form >
+        </div >
     );
 }
