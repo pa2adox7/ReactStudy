@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import ErrorMessage from "../components/ErrorMessage";
 
 export default function LoginPage() {
     const router = useRouter();
@@ -72,10 +73,10 @@ export default function LoginPage() {
                 />
 
                 {/* 错误提示 */}
-                {error && (
+                {/* {error && (
                     <div className="flex flex-col gap-1">
                         <p className="text-sm text-red-500">{error}</p>
-                        {/* 错误次数达到阈值后显示找回密码的入口 */}
+                        
                         {failCount >= FAIL_THRESHOLD && (
                             <button
                                 type="button"
@@ -86,7 +87,13 @@ export default function LoginPage() {
                             </button>
                         )}
                     </div>
-                )}
+                )} */}
+
+                {error && (<ErrorMessage
+                    message={error}
+                    color="text-red-500"
+                />)
+                }
 
                 <button
                     type="submit"

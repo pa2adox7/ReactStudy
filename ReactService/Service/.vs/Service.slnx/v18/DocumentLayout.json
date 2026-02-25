@@ -7,28 +7,28 @@
       "RelativeMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|solutionrelative:service\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|e:\\001\\a1\\reactstudy\\reactstudy\\reactservice\\service\\service\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|solutionrelative:service\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|e:\\001\\a1\\reactstudy\\reactstudy\\reactservice\\service\\service\\dtos\\authresponses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|solutionrelative:service\\dtos\\authresponses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|e:\\001\\a1\\reactstudy\\reactstudy\\reactservice\\service\\service\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|solutionrelative:service\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|e:\\001\\a1\\reactstudy\\reactstudy\\reactservice\\service\\service\\dtos\\authrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|solutionrelative:service\\dtos\\authrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|e:\\001\\a1\\reactstudy\\reactstudy\\reactservice\\service\\service\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|solutionrelative:service\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|e:\\001\\a1\\reactstudy\\reactstudy\\reactservice\\service\\service\\infrastructure\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|solutionrelative:service\\infrastructure\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|e:\\001\\a1\\reactstudy\\reactstudy\\reactservice\\service\\service\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|solutionrelative:service\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|e:\\001\\a1\\reactstudy\\reactstudy\\reactservice\\service\\service\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|solutionrelative:service\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|e:\\001\\a1\\reactstudy\\reactstudy\\reactservice\\service\\service\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|solutionrelative:service\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{02B79BC5-153E-2FD9-CAE3-8149E0D9044F}|Service\\Service.csproj|e:\\001\\a1\\reactstudy\\reactstudy\\reactservice\\service\\service\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,34 +46,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 213,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthResponses.cs",
-              "DocumentMoniker": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\DTOs\\AuthResponses.cs",
-              "RelativeDocumentMoniker": "Service\\DTOs\\AuthResponses.cs",
-              "ToolTip": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\DTOs\\AuthResponses.cs",
-              "RelativeToolTip": "Service\\DTOs\\AuthResponses.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T02:49:01.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Services\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\IAuthService.cs",
-              "ToolTip": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Services\\IAuthService.cs",
-              "RelativeToolTip": "Service\\Services\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T03:19:41.627Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -114,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "JwtService.cs",
               "DocumentMoniker": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Infrastructure\\JwtService.cs",
               "RelativeDocumentMoniker": "Service\\Infrastructure\\JwtService.cs",
@@ -127,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "AuthRequests.cs",
               "DocumentMoniker": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\DTOs\\AuthRequests.cs",
               "RelativeDocumentMoniker": "Service\\DTOs\\AuthRequests.cs",
@@ -140,7 +114,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\AuthService.cs",
+              "ToolTip": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Services\\AuthService.cs",
+              "RelativeToolTip": "Service\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAuwC8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T03:16:35.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthResponses.cs",
+              "DocumentMoniker": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\DTOs\\AuthResponses.cs",
+              "RelativeDocumentMoniker": "Service\\DTOs\\AuthResponses.cs",
+              "ToolTip": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\DTOs\\AuthResponses.cs",
+              "RelativeToolTip": "Service\\DTOs\\AuthResponses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T02:49:01.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Service\\Services\\IAuthService.cs",
+              "ToolTip": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Services\\IAuthService.cs",
+              "RelativeToolTip": "Service\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T03:19:41.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AuthController.cs",
               "DocumentMoniker": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Service\\Controllers\\AuthController.cs",
@@ -153,20 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Service\\Services\\AuthService.cs",
-              "ToolTip": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Services\\AuthService.cs",
-              "RelativeToolTip": "Service\\Services\\AuthService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAYwDgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T03:16:35.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "E:\\001\\A1\\ReactStudy\\ReactStudy\\ReactService\\Service\\Service\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Service\\Data\\AppDbContext.cs",
