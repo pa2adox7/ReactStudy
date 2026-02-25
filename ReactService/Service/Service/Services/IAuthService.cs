@@ -9,5 +9,6 @@ namespace Service.Services
         Task<string?> LoginAsync(AuthRequests.LoginRequest request);
         Task<bool> CheckUserAsync(string email);
         Task<bool> ResetPassWord(AuthRequests.LoginRequest request);
+        Task<List<AuthResponses.UserInfoResponse>> GetUserEmailList();
     }
 }

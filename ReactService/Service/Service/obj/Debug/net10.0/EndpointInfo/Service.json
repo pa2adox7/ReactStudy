@@ -129,6 +129,18 @@
           }
         }
       }
+    },
+    "/api/Auth/userEmailList": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

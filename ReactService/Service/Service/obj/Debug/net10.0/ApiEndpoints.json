@@ -62,5 +62,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Service.Controllers.AuthController",
+    "Method": "GetUserEmailList",
+    "RelativePath": "api/Auth/userEmailList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

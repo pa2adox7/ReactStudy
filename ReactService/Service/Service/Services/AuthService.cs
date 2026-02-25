@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Service.DTOs;
 using Service.Infrastructure;
 using Service.Models;
@@ -40,6 +41,16 @@ namespace Service.Services
             var token = await userManager.GeneratePasswordResetTokenAsync(user);
             var result = await userManager.ResetPasswordAsync(user, token, request.Password);
             return result.Succeeded;
+        }
+
+        public async Task<List<AuthResponses.UserInfoResponse>> GetUserEmailList()
+        {
+            var result = await userManager.Users
+                .Where(n => !string.IsNullOrWhiteSpace(n.Email))
+                .Select(n => new AuthResponses.UserInfoResponse(
+                    n.Email!.ToLower(),
+                    n.DisPlayName)).ToListAsync();
+            return result;
         }
     }
 }

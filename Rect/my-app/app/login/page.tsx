@@ -72,9 +72,9 @@ export default function LoginPage() {
                 />
 
                 {/* 错误提示 */}
-                {error &&(
+                {error && (
                     <div className="flex flex-col gap-1">
-                        <p className = "text-sm text-red-500">{error}</p>
+                        <p className="text-sm text-red-500">{error}</p>
                         {/* 错误次数达到阈值后显示找回密码的入口 */}
                         {failCount >= FAIL_THRESHOLD && (
                             <button
@@ -107,6 +107,13 @@ export default function LoginPage() {
                         立即注册
                     </button>
                 </p>
+
+                <button
+                    type="button"
+                    onClick={() => router.push("/userList")}
+                    className="rounded-lg bg-blue-600 py-2 text-sm text-white hover:bg-blue-700 disabled:opacity-50">
+                    用户列表
+                </button>
             </form>
         </div>
     );

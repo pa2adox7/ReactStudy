@@ -37,5 +37,12 @@ namespace Service.Controllers
             var result = await authService.ResetPassWord(request);
             return Ok(result);
         }
+
+        [HttpGet("userEmailList")]
+        public async Task<IActionResult> GetUserEmailList()
+        {
+            var result = await authService.GetUserEmailList();
+            return Ok(result);
+        }
     }
 }
