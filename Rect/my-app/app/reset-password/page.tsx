@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { fetchResetPassword } from "@/services/authService";
 
 export default function ResetPasswordPage() {
     const router = useRouter();
@@ -18,25 +19,30 @@ export default function ResetPasswordPage() {
         setLoading(true);
 
         try {
-            const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+            //     const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-            const res = await fetch(`${baseUrl}/api/Auth/resetPassword`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, password }),
-            });
+            //     const res = await fetch(`${baseUrl}/api/Auth/resetPassword`, {
+            //         method: "POST",
+            //         headers: { "Content-Type": "application/json" },
+            //         body: JSON.stringify({ email, password }),
+            //     });
 
-            if (res.ok) {
-                const data = await res.json();
-                alert("密码重置成功，请使用新密码登录");
-                router.push("/login");
-            } else {
-                const errorData = await res.json();
-                setError(errorData.message || "密码重置失败");
-            }
-        }
-        catch {
-            setError("无法连接服务器");
+            //     if (res.ok) {
+            //         const data = await res.json();
+            //         alert("密码重置成功，请使用新密码登录");
+            //         router.push("/login");
+            //     } else {
+            //         const errorData = await res.json();
+            //         setError(errorData.message || "密码重置失败");
+            //     }
+            // }
+            // catch {
+            //     setError("无法连接服务器");
+            const result = await fetchResetPassword({ email, password });
+            alert("密码重置成功，请使用新密码登录");
+            router.push("/login");
+        } catch (err: any) {
+            setError(err.message || "密码重置失败");
         } finally {
             setLoading(false);
         }

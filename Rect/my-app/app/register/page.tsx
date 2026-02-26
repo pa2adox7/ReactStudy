@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { fetchRegister } from "@/services/authService";
+import { fetchCheckEmail } from "@/services/authService";
 
 export default function RegisterPage() {
     const router = useRouter();
@@ -22,13 +24,17 @@ export default function RegisterPage() {
         setEmailStatus("idle");
 
         try {
-            const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
-            const res = await fetch(`${baseUrl}/api/Auth/checkUser?email=${encodeURIComponent(email)}`);
-            if (res.ok) {
-                const data = await res.json();
-                // result: true → 已被注册，result: false → 可以使用
-                setEmailStatus(data ? "available" : "taken");
-            }
+            // const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+            // const res = await fetch(`${baseUrl}/api/Auth/checkUser?email=${encodeURIComponent(email)}`);
+            // if (res.ok) {
+            //     const data = await res.json();
+            //     // result: true → 已被注册，result: false → 可以使用
+            //     setEmailStatus(data ? "available" : "taken");
+            // }
+
+            const result = await fetchCheckEmail(email);
+            setEmailStatus(result ? "available" : "taken");
+
         } catch {
             // 检测失败不阻断注册流程
         } finally {
@@ -49,23 +55,31 @@ export default function RegisterPage() {
         setLoading(true);
 
         try {
-            const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+            //     const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-            const res = await fetch(`${baseUrl}/api/Auth/register`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, password, displayName }),
-            });
+            //     const res = await fetch(`${baseUrl}/api/Auth/register`, {
+            //         method: "POST",
+            //         headers: { "Content-Type": "application/json" },
+            //         body: JSON.stringify({ email, password, displayName }),
+            //     });
 
-            if (res.ok) {
-                router.push("/login");     // 注册成功 → 跳回登录
-            } else {
-                const data = await res.json().catch(() => ({}));
-                setError(data?.message || "注册失败");
-            }
-        } catch {
-            setError("无法连接服务器");
-        } finally {
+            //     if (res.ok) {
+            //         router.push("/login");     // 注册成功 → 跳回登录
+            //     } else {
+            //         const data = await res.json().catch(() => ({}));
+            //         setError(data?.message || "注册失败");
+            //     }
+            // } catch {
+            //     setError("无法连接服务器");
+            // }
+            const result = await fetchRegister({ email, password, displayName });
+
+            router.push("/login");     // 注册成功 → 跳回登录
+
+        } catch (error: any) {
+            setError(error.message || "注册失败");
+        }
+        finally {
             setLoading(false);
         }
     };
@@ -134,7 +148,7 @@ export default function RegisterPage() {
                     className="rounded-lg border px-3 py-2 text-sm outline-none focus:border-blue-500"
                 />
 
-                {error && <p className="text-sm text-red-500">{error}</p>}
+                {error && <p className="text-sm text-red-500 whitespace-pre-line">{error}</p>}
 
                 <button
                     type="submit"

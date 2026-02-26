@@ -25,7 +25,7 @@ namespace Service.Infrastructure
                 issuer: config["Jwt:Issuer"],
                 audience: config["Jwt:Audience"],
                 claims: clamins,
-                expires: DateTime.UtcNow.AddMinutes(double.Parse(config["Jwt:ExpireMinutes"]!)),
+                expires: DateTime.UtcNow.AddDays(double.Parse(config["Jwt:ExpireMinutes"] ?? "1")),
                 signingCredentials: creds
             );
 

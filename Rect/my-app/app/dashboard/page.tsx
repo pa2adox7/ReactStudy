@@ -1,10 +1,13 @@
 "use client";
 
-import StatCard from "../components/StatCard"; // 引入子组件
+import StatCard from "@/components/StatCard"; // 引入子组件
+import { useAuthStore } from "@/store/useAuthStore";
 
 export default function DashboardPage() {
     // 父组件的状态
     const userCount = 128;
+
+     const { user, token } = useAuthStore();
 
     // 父组件定义的逻辑函数
     const handleSeeMore = () => {

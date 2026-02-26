@@ -23,11 +23,16 @@ namespace Service.Extensions
         {
             builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
             {
-                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireNonAlphanumeric = false; // 不强制要求特殊符号
+                opt.Password.RequiredUniqueChars = 1; // 至少要用一种不同的字符
+                opt.Password.RequireLowercase = false; // 不强制包含小写字母
+                opt.Password.RequireUppercase = false; // 不强制包含大写字母
+                opt.Password.RequireDigit = false; // 不强制包含数字
                 opt.Password.RequiredLength = 6;
             })
             .AddEntityFrameworkStores<AppDbContext>()
-            .AddDefaultTokenProviders();
+            .AddDefaultTokenProviders()
+            .AddErrorDescriber<Service.Infrastructure.ChineseIdentityErrorDescriber>();
             return builder;
         }
 
@@ -50,7 +55,8 @@ namespace Service.Extensions
                     ValidIssuer = jwtSection["Issuer"],
                     ValidAudience = jwtSection["Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(
-                        Encoding.UTF8.GetBytes(jwtSection["Key"]!))
+                        Encoding.UTF8.GetBytes(jwtSection["Key"]!)),
+                    ClockSkew = TimeSpan.Zero
                 };
             });
             return builder;

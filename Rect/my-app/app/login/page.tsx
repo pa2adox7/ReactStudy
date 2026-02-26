@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import ErrorMessage from "../components/ErrorMessage";
+import ErrorMessage from "@/components/ErrorMessage";
+import { fetchLogin } from "@/services/authService";
+import { useAuthStore } from "@/store/useAuthStore";
+import Cookies from "js-cookie"; // 引入 js-cookie 库用于操作 cookie
 
 export default function LoginPage() {
     const router = useRouter();
@@ -15,6 +18,8 @@ export default function LoginPage() {
     const [failCount, setFailCount] = useState(0);
     const FAIL_THRESHOLD = 3; // 错误次数达到阈值后显示找回密码
 
+    const setAuth = useAuthStore((state) => state.setAuth);
+
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         setError("");
@@ -22,26 +27,41 @@ export default function LoginPage() {
 
         try {
             // 自动读取当前环境的 API 地址
-            const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+            // const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-            const res = await fetch(`${baseUrl}/api/Auth/login`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, password }),
-            });
+            // const res = await fetch(`${baseUrl}/api/Auth/login`, {
+            //     method: "POST",
+            //     headers: { "Content-Type": "application/json" },
+            //     body: JSON.stringify({ email, password }),
+            // });
 
-            if (res.ok) {
-                const data = await res.json();
-                localStorage.setItem("token", data.token); // ← 保存 token
-                setFailCount(0); // 登录成功重置错误次数
-                router.push("/");          // 登录成功 → 跳转首页
-            } else {
-                const data = await res.json().catch(() => ({}));
-                setFailCount((prev) => prev + 1); // ← 每次失败 +1
-                setError(data?.message || "登录失败");
-            }
-        } catch {
-            setError("无法连接服务器");
+            // if (res.ok) {
+            //     const data = await res.json();
+            //     localStorage.setItem("token", data.token); // ← 保存 token
+            //     setFailCount(0); // 登录成功重置错误次数
+            //     router.push("/");          // 登录成功 → 跳转首页
+            // } else {
+            //     const data = await res.json().catch(() => ({}));
+            //     setFailCount((prev) => prev + 1); // ← 每次失败 +1
+            //     setError(data?.message || "登录失败");
+            // }
+
+            const data = await fetchLogin({ email, password });
+
+            // 登录成功，处理 Token
+            // localStorage.setItem("token", data.token);
+
+            // 调用 setAuth 后，token 会存入 localStorage 且 Axios 拦截器能立即读取
+            setAuth(data.token, data.user);
+
+            Cookies.set("auth-token", data.token, { expires: 1, path: "/" }); // 可选：设置 cookie，path="/" 使其在整个站点可用
+
+            // 跳转到仪表盘或首页
+            router.push("/dashboard");
+
+        } catch (err: any) {
+            // 这里拿到的 err.message 就是你在 axios 拦截器里定义的错误文本
+            setError(err.message);
         } finally {
             setLoading(false);
         }
@@ -90,7 +110,7 @@ export default function LoginPage() {
                 )} */}
 
                 {error && (
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col gap-1 whitespace-pre-line">
                         <ErrorMessage
                             message={error}
                             color="text-red-500"

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Service.DTOs;
 using Service.Services;
 
@@ -12,11 +13,17 @@ namespace Service.Controllers
         public async Task<IActionResult> Register(AuthRequests.RegisterRequest request)
         {
             var result = await authService.RegisterAsync(request);
-            if (!result.Succeeded) return BadRequest(result.Errors);
+            if (!result.Succeeded)
+            {
+                // 获取所有错误的描述文字
+                var errorMessages = string.Join("\n", result.Errors.Select(e => e.Description));
+                return BadRequest(new { message = errorMessages });
+            }
             return Ok(new { message = "注册成功" });
         }
 
         [HttpPost("login")]
+        //[Authorize]
         public async Task<IActionResult> Login(AuthRequests.LoginRequest request)
         {
             var token = await authService.LoginAsync(request);
@@ -39,6 +46,7 @@ namespace Service.Controllers
         }
 
         [HttpGet("userEmailList")]
+        [Authorize]
         public async Task<IActionResult> GetUserEmailList()
         {
             var result = await authService.GetUserEmailList();
